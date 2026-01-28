@@ -17,7 +17,6 @@ for (let j = 0; j < gridXY; j++) {
     for (let i = 0; i < gridXY; i++) {
         const gridDivX = document.createElement("div");
         gridDivX.className = 'gridBox';
-        gridDivX.textContent = `${i + 1}, ${j + 1}`;
         gridDivY.appendChild(gridDivX)
         gridDivX.style.height = gridSquareWidth
         gridDivX.style.width = gridSquareWidth
@@ -30,3 +29,11 @@ for (let j = 0; j < gridXY; j++) {
 container.style.display = 'flex';
 container.style.flexDirection = 'column';
 container.style.justifyContent = 'center'
+
+const gridBoxes = document.querySelectorAll('.gridBox');
+
+gridBoxes.forEach(box => {
+    box.addEventListener("mouseenter", () => {
+        box.style.backgroundColor = 'black';
+    });
+});
