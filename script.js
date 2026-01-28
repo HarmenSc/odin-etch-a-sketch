@@ -9,9 +9,14 @@ for (let j = 0; j < gridXY; j++) {
     const gridDivY = document.createElement("div")
     gridDivY.className = 'gridBoxY'
     container.appendChild(gridDivY)
+    gridDivY.style.display = 'flex';
+    gridDivY.style.flexDirection = 'row';   
     for (let i = 0; i < gridXY; i++) {
         const gridDivX = document.createElement("div");
         gridDivX.className = 'gridBox';
         gridDivX.textContent = `${i + 1}, ${j + 1}`;
         gridDivY.appendChild(gridDivX)
     }}
+
+container.style.display = 'flex';
+container.style.flexDirection = 'column'; 
