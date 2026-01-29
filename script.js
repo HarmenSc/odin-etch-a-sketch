@@ -1,11 +1,19 @@
+const resetButton = document.createElement("button")
+
+resetButton.style.margin = '0 auto'
+resetButton.textContent = "Reset"
+
+
 const container = document.createElement("div")
 container.id = "container"
 
 document.body.appendChild(container)
+container.appendChild(resetButton)
 
-const gridXY = 16
+
+const gridXY = 50
 const gridSquareWidth = '50px'
-const fullGridSize = '960px'
+const fullGridSize = '720px'
 
 container.style.height = fullGridSize
 container.style.width = fullGridSize
